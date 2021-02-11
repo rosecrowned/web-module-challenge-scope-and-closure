@@ -86,13 +86,24 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-function finalScore(inning, num)
-const currentScore = getInningScore(inning)
-finalHome = current.Home;
-finalAway = current.Away;
 
- for (i=0; i < num; i++)
-  finalHome = ++ current.Home
+function finalScore(inning, num){
+
+  let finalScore = {
+    Home: 0,
+    Away: 0
+  };
+ 
+   for(let i = 0; i <= num; i++) {
+     let home = inning()
+     let away = inning()
+     finalScore.Home = finalScore.Home + home;
+     finalScore.Away = finalScore.Away + away;
+   };
+   return finalScore
+}	;
+
+console.log(finalScore(inning, 8));
 
 
 
